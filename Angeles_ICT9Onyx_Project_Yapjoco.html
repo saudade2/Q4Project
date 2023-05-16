@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Conversion Calculator</title>
+	<style type="text/css">
+		.btn {
+  			border: 2px solid black;
+  			background-color: white;
+  			color: black;
+  			font-size: 16px;
+  			cursor: pointer;
+		}
+		div{
+			margin: auto;
+   			width:60%;
+  			bg: white;
+  			padding: 50px;
+  			border-radius: 25px;
+  			border: 4px solid black;
+  			background-color: white;
+  			margin-top: 100px;
+ 		}
+  		body{
+  			background-color: green;
+  		}
+	</style>
+</head>
+<body>
+<div>
+<h1><center> Length Conversion Calculator</center></h1>
+<h5 class="text-secondary"> <center>Millimeter → Centimeter, Meters, and Kilometers</center></h5>
+<br>
+<hr>
+<form>
+<br>
+  <center>Enter Millimeter: <input type="number" name="millimeter" placeholder="Millimeter">
+  &nbsp; →  &nbsp;&nbsp; &nbsp;Converted Value: <input type="number" name="output"></center>
+  <br>
+  <center>
+  <button class="btn" style="background-color: lightgreen;" onclick="centimeter()">Calculate to Centimeter</button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <button class="btn" style="background-color: lightgreen;" onclick="meter()">Calculate to Meter</button>
+   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <button class="btn" style="background-color: lightgreen;" onclick="kilometer()">Calculate to Kilometer</button>
+</center>
+</form>
+<br>
+<script>
+	function centimeter() {
+    var centimeter = document.getElementsByName('millimeter')[0].value;
+    var product = (centimeter) / 10 ;
+    document.getElementsByName('output')[0].value= product;
+}
+  function meter() {
+    var meter = document.getElementsByName('millimeter')[0].value;
+    var product = (meter) / 1000 ;
+    document.getElementsByName('output')[0].value= product;
+}
+
+function kilometer() {
+    var kilometer = document.getElementsByName('millimeter')[0].value;
+    var product = (kilometer) / 1000000 ;
+    document.getElementsByName('output')[0].value= product;
+}
+</script>
+<hr>
+<p> 1mm= 0.1cm, 0.001m, 0.000001km</p>
+</div>
+</body>
+</html>
